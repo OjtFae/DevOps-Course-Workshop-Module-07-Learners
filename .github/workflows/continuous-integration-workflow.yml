@@ -22,14 +22,11 @@ jobs:
 
     - name: Test with the dotnet CLI
       run: dotnet test
-    
-    - name: CD to DotnetTemplate.Web directory
-      run: cd ./DotnetTemplate.Web
 
     - name: npm install
-      run: npm install
+      run: npm install --prefix /home/runner/work/DevOps-Course-Workshop-Module-07-Learners/DevOps-Course-Workshop-Module-07-Learners/package/DotnetTemplate.Web
     
     - name: npm build
-      run: npm build
+      run: npm build --prefix /home/runner/work/DevOps-Course-Workshop-Module-07-Learners/DevOps-Course-Workshop-Module-07-Learners/package/DotnetTemplate.Web
     
 
