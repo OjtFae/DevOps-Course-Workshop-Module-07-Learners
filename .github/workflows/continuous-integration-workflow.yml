@@ -12,7 +12,8 @@ jobs:
     - name: Hello world       # Name of step
       run: echo 'Hello world' # Command to run
 
-    - name: Hello world js
-      uses: actions/hello-world-javascript-action@v1.1 # Name of the action. This uses https://github.com/actions/hello-world-javascript-action
-      with:                                            # This section is needed if you need to pass arguments to the action
-        who-to-greet: 'Mona the Octocat'
+    - name: Setup .NET '5.0.3'
+      uses: actions/setup-dotnet@v3
+      with:
+        # Semantic version range syntax or exact version of a dotnet version
+        dotnet-version: '5.0.3'
